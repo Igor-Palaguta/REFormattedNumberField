@@ -108,7 +108,7 @@
 
 - (void)commonInit
 {
-    self.delegate = self.strongDelegate;
+    [super setDelegate: self.strongDelegate];
     self.keyboardType = UIKeyboardTypeNumberPad;
     [self addTarget:self action:@selector(formatInput:) forControlEvents:UIControlEventEditingChanged];
 }
