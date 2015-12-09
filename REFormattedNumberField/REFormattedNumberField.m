@@ -140,6 +140,9 @@
 {
     NSInteger decimalPosition = -1;
     for (NSInteger i = self.text.length - 1; i > 0; i--) {
+        if (i - 1 >= self.format.length) {
+            continue;
+        }
         NSString *c = [self.format substringWithRange:NSMakeRange(i - 1, 1)];
         
         if ([c isEqualToString:@"X"]) {
